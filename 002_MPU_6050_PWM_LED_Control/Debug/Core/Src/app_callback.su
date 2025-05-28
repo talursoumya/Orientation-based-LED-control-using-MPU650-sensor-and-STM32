@@ -1,0 +1,4 @@
+../Core/Src/app_callback.c:34:6:HAL_TIM_PWM_PulseFinishedCallback	16	static
+../Core/Src/app_callback.c:51:6:HAL_TIM_ErrorCallback	16	static
+../Core/Src/app_callback.c:61:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/app_callback.c:71:6:mpu6050_raw_data_ready_callback	24	static,ignoring_inline_asm

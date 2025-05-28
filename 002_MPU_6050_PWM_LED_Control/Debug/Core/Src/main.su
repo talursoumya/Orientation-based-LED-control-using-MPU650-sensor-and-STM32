@@ -1,0 +1,13 @@
+../Core/Src/main.c:101:6:map	32	static
+../Core/Src/main.c:123:6:change_pwm_duty_cycle	16	static
+../Core/Src/main.c:133:10:get_cycle_count	4	static
+../Core/Src/main.c:138:10:init_cycle_counter	4	static
+../Core/Src/main.c:154:5:main	8	static
+../Core/Src/main.c:288:6:SystemClock_Config	88	static
+../Core/Src/main.c:330:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:364:13:MX_TIM4_Init	64	static
+../Core/Src/main.c:428:13:MX_GPIO_Init	56	static
+../Core/Src/main.c:572:6:sensor_read_task	40	static
+../Core/Src/main.c:611:6:pwm_control_task	96	static
+../Core/Src/main.c:671:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:699:6:Error_Handler	4	static,ignoring_inline_asm
