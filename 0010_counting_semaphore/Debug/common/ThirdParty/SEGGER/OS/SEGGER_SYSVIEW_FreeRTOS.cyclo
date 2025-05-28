@@ -1,0 +1,6 @@
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:84:13:_cbSendTaskList	2
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:104:12:_cbGetTime	1
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:126:6:SYSVIEW_AddTask	3
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:156:6:SYSVIEW_UpdateTask	5
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:187:6:SYSVIEW_DeleteTask	6
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:228:6:SYSVIEW_SendTaskInfo	1

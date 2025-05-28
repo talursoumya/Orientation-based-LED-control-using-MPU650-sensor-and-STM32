@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;005_LED_Task_Notify/004_LED_Task_Notify.launch&apos; to &apos;005_LED_Task_Notify.launch&apos;" description="Rename resource &apos;004_LED_Task_Notify.launch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="004_LED_Task_Notify.launch" name="005_LED_Task_Notify.launch" stamp="1746695116178" updateReferences="true"/>
+</session>

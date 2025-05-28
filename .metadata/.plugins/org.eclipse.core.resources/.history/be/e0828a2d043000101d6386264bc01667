@@ -1,0 +1,47 @@
+/*
+ * led_effect.c
+ *
+ *  Created on: May 13, 2025
+ *      Author: talur
+ */
+
+
+#include "main.h"
+
+void led_effect_stop(void)
+{
+	for(int i=0;i<4;i++)
+	{
+		xTimerStop(handle_led_timer[i],portMAX_DELAY);
+	}
+}
+
+void led_effect(int n)
+{
+	led_effect_stop();
+	xTimerStart(handle_led_timer[n-1],portMAX_DELAY);
+}
+
+void LED_effect1(void)
+{
+	static int flag = 1;
+	(flag ^= 1)? turn_off_all_leds(): turn_on_all_leds();
+}
+
+
+void turn_off_all_leds(void)
+{
+	HAL_GPIO_Write_Pin(LD3_GPIO_Port,LD3_Pin,GPIO_PIN_RESET);
+	HAL_GPIO_Write_Pin(LD4_GPIO_Port,LD4_Pin,GPIO_PIN_RESET);
+	HAL_GPIO_Write_Pin(LD5_GPIO_Port,LD5_Pin,GPIO_PIN_RESET);
+	HAL_GPIO_Write_Pin(LD6_GPIO_Port,LD6_Pin,GPIO_PIN_RESET);
+}
+
+
+void turn_on_all_leds(void)
+{
+	HAL_GPIO_Write_Pin(LD3_GPIO_Port,LD3_Pin,GPIO_PIN_SET);
+	HAL_GPIO_Write_Pin(LD4_GPIO_Port,LD4_Pin,GPIO_PIN_SET);
+	HAL_GPIO_Write_Pin(LD5_GPIO_Port,LD5_Pin,GPIO_PIN_SET);
+	HAL_GPIO_Write_Pin(LD6_GPIO_Port,LD6_Pin,GPIO_PIN_SET);
+}

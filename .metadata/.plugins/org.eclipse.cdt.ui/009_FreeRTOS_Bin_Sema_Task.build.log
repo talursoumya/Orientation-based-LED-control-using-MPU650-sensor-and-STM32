@@ -1,0 +1,43 @@
+18:42:15 **** Incremental Build of configuration Debug for project 009_FreeRTOS_Bin_Sema_Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/FreeRTOS/include" -I"C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/Config" -I"C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS" -I"C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:96:22: warning: unused variable 'task3_handle' [-Wunused-variable]
+   96 |         TaskHandle_t task3_handle;
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c:95:22: warning: unused variable 'task2_handle' [-Wunused-variable]
+   95 |         TaskHandle_t task2_handle;
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:67:13: warning: 'prvSetupHardware' declared 'static' but never defined [-Wunused-function]
+   67 | static void prvSetupHardware(void);
+      |             ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:69:13: warning: 'prvSetupUart' declared 'static' but never defined [-Wunused-function]
+   69 | static void prvSetupUart(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:73:13: warning: 'vMangerTask' declared 'static' but never defined [-Wunused-function]
+   73 | static void vMangerTask(void *pvParameters);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:74:13: warning: 'vEmployeeTask' declared 'static' but never defined [-Wunused-function]
+   74 | static void vEmployeeTask(void *pvParameters);
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c:412:13: warning: 'task3_handler' defined but not used [-Wunused-function]
+  412 | static void task3_handler(void* parameters)
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c:396:13: warning: 'task2_handler' defined but not used [-Wunused-function]
+  396 | static void task2_handler(void* parameters)
+      |             ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "009_FreeRTOS_Bin_Sema_Task.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32F407G_Development\Development\RTOS\009_FreeRTOS_Bin_Sema_Task\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009_FreeRTOS_Bin_Sema_Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./common/ThirdParty/SEGGER/Rec/segger_uart.o: in function `USART2_IRQHandler':
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/Rec/segger_uart.c:171: multiple definition of `USART2_IRQHandler'; ./Core/Src/stm32f4xx_it.o:C:/STM32F407G_Development/Development/RTOS/009_FreeRTOS_Bin_Sema_Task/Debug/../Core/Src/stm32f4xx_it.c:165: first defined here
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/STM32F407G_Development/Development/RTOS/009_FreeRTOS_Bin_Sema_Task/Debug/../Core/Src/main.c:141: undefined reference to `xTaskCreate'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/STM32F407G_Development/Development/RTOS/009_FreeRTOS_Bin_Sema_Task/Debug/../Core/Src/main.c:145: undefined reference to `vTaskStartScheduler'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o: in function `_cbGetTime':
+C:/STM32F407G_Development/Development/RTOS/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c:107: undefined reference to `xTaskGetTickCountFromISR'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:69: 009_FreeRTOS_Bin_Sema_Task.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+18:42:16 Build Failed. 5 errors, 8 warnings. (took 886ms)
+

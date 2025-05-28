@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item key="Start" value="0x200133bc"/>
+		<item key="End" value="0x200143b9"/>
+		<item key="Initial address" value="0x200133bc"/>
+		<item key="File" value="C:\STM32F407G_Development\Development\RTOS\records\001.SVdat"/>
+		<item key="SELECTED_EXPORTER" value="rawbinary"/>
+	</section>
+</section>
